@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg"></div>
+
+   <!-- Weather animations -->
+    <div class="rain"></div>
+    <div class="snow"></div>
+    <div class="fog"></div>
+    <div class="sun"></div>
+    <div class="clouds"></div>
+
+    <div class="box">
+        <h1 class="title">🌤️ Weather App</h1>
+        <p class="creator">Created by Sharik</p>
+
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter City...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="result">
+            <h2 id="cityName">---</h2>
+            <h1 id="temp">--°C</h1>
+            <img id="icon">
+            <p id="desc"></p>
+
+            <div class="details">
+                <p id="humidity"></p>
+                <p id="wind"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>  

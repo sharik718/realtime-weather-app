@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.box {
+  width: 370px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 25px;
+  margin: 60px auto;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.creator {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+#searchBtn {
+  padding: 10px 15px;
+  border: none;
+  background: gold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#icon {
+  width: 90px;
+  margin: 15px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+/* ====== WEATHER ANIMATIONS ====== */
+
+.rain, .snow, .fog, .sun, .clouds {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+
+/* Rain animation */
+.rain {
+  background-image: url('https://i.imgur.com/N9QbYyK.png');
+  animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+  from { background-position: 0 0; }
+  to   { background-position: 0 30px; }
+}
+
+/* Snow animation */
+.snow {
+  background-image: url('https://i.imgur.com/PHpFQ3W.png');
+  animation: snow 1s linear infinite;
+}
+
+@keyframes snow {
+  from { background-position: 0 0; }
+  to   { background-position: 0 20px; }
+}
+
+/* Fog animation */
+.fog {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  animation: fog 5s ease-in-out infinite;
+}
+
+@keyframes fog {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.2; }
+}
+
+/* Sun glow */
+.sun {
+  box-shadow: 0px 0px 150px 50px rgba(255,255,100,0.5);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 60%;
+  position: fixed;
+  display: none;
+}
+
+/* Clouds float */
+.clouds {
+  background-image: url('https://i.imgur.com/qWfXc5T.png');
+  animation: clouds 20s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes clouds {
+  from { background-position: 0 0; }
+  to   { background-position: 1000px 0; }
+}
